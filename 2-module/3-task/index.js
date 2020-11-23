@@ -14,6 +14,5 @@ let calculator = {
 };
 print(calculator)
 
-function print(text) {console.log(text)}
 // НЕ УДАЛЯТЬ СТРОКУ, НУЖНА ДЛЯ ПРОВЕРКИ
 window.calculator = calculator; // делает ваш калькулятор доступным глобально

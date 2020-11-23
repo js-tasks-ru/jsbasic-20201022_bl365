@@ -6,7 +6,7 @@
 function isEmpty(obj) {
   // ваш код...
   for (o in obj) {
-		return false;
-	}
-	return true;
+	return false;
+  }
+  return true;
 }

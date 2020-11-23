@@ -12,7 +12,6 @@ function ucFirst(str) {
       }
       return (str[0].toUpperCase())
     };
-    console.log('empty str')
     return str;
   }
   return false;
