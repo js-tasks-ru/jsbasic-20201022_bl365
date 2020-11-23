@@ -4,29 +4,18 @@
  */
 function camelize(str) {
   // ваш код...
-  let shortStr = '',
-	stSlice = 0,
-	endSlice = 0,
-	indOf = 0;
+  let temp,
+  short = [];
+  str = str.split('-')
 
-	while  (indOf !== -1) {
-		indOf = str.indexOf('-', stSlice)
-
-		if (indOf === -1) {
-			endSlice = str.length
-		} else {
-			endSlice = indOf
-		}
-
-		if (stSlice===0) {
-			shortStr += str.slice(stSlice, endSlice)
-		} else {
-
-			shortStr += str[stSlice].toUpperCase()
-		+ str.slice(stSlice+1, endSlice)
-		}
-		stSlice = endSlice +1
-	}
-
-	return shortStr;
+  for (s in str) {
+    temp = str[s]
+    if (s == 0) {
+      short.push(temp)
+    } else if (temp !== '') {
+      short.push(temp[0].toUpperCase())
+      short.push(temp.slice(1))
+    }
+  }
+  return short.join('')
 }
