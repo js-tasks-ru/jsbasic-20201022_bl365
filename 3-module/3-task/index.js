@@ -25,7 +25,6 @@ function camelize(str) {
 			shortStr += str[stSlice].toUpperCase()
 		+ str.slice(stSlice+1, endSlice)
 		}
-
 		stSlice = endSlice +1
 	}
 
