@@ -7,10 +7,11 @@
 function showSalary(users, age) {
   let new_users = '', temp
   for (u in users) {
-	//temp = users[u]
-    if (u.age <= age) {
-      new_users += '/n' + ` ${u.name}, ${u.balance}`
+	temp = users[u]
+    if (temp.age <= age) {
+      new_users += `\n${temp.name}, ${temp.balance}`
     }
   }
-  return new_users
+  return new_users.slice(1)
 }
+
