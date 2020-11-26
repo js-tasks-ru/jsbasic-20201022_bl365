@@ -4,7 +4,7 @@
  * @returns {{min:number, max:number}}  объект
  */
 function getMinMax(str) {
-
+  
   let strShort = str.split(' ').join();
   let arrWordsAndNum = strShort.split(',');
 
