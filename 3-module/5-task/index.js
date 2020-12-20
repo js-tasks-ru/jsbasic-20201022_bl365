@@ -5,10 +5,14 @@
  */
 function getMinMax(str) {
 
-  let strShort = str.split(' ').join();
-  let arrWordsAndNum = strShort.split(',');
 
-  let num = arrWordsAndNum.filter(i => i !== '' && isFinite(i))
+  let stringWithoutSpaces = str.split(' ').join();
+  let itemsDividedByComma = stringWithoutSpaces.split(',');
+  let numbersOnly = itemsDividedByComma
+    .filter((item) => item !== '' && isFinite(item));
 
-  return { max: Math.max(...num), min: Math.min(...num)}
+  let max = Math.max(...numbersOnly);
+  let min = Math.min(...numbersOnly);
+
+  return {min, max};
 }
