@@ -4,6 +4,7 @@
  * @returns {{min:number, max:number}}  объект
  */
 function getMinMax(str) {
+
   let stringWithoutSpaces = str.split(' ').join();
   let itemsDividedByComma = stringWithoutSpaces.split(',');
   let numbersOnly = itemsDividedByComma
