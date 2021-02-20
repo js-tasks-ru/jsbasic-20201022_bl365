@@ -23,7 +23,6 @@ export default class UserTable {
     let listTHTickets = {name: 'Имя', age: 'Возраст', salary: 'Зарплата', city: 'Город', empty: ''}
     let tbl = document.createElement('table')
 
-
     for (let i in rows) {
       tbl.insertRow()
       for (let j in rows[i]) {
@@ -40,11 +39,15 @@ export default class UserTable {
     }
 
     this.elem = tbl
+    this.elem.addEventListener('click', (event) => this.onClick(event))
+  };
+
+  onClick(event) {
+    if(event.target.tagName != 'BUTTON') {
+      return;
+    }
+
+    let tr = event.target.closest('tr')
+    tr.remove()
   }
-
-
-
-
-
-
 }
