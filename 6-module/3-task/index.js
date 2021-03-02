@@ -91,8 +91,10 @@ export default class Carousel {
   }
 
   productAdd(target) {
+    let slideId = target.closest('.carousel__slide').getAttribute('data-id')
+
     this.elem.dispatchEvent(new CustomEvent("product-add", {
-      detail: target.closest('.carousel__slide').getAttribute('data-id'),
+      detail: slideId,
       bubbles: true
     }))
   }
